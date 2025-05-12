@@ -1,0 +1,77 @@
+{
+  "cale_galerie": "/resurse/imagini/galerie/",
+  "imagini": [
+    {
+      "cale_imagine": "69b557df2c307fba1fafe0c178c202ab.jpg",
+      "titlu": "Buchet trandafiri de Crăciun",
+      "descriere": "Trandafiri roșii și conuri de brad",
+      "timp": "08:00-12:00"
+    },
+    {
+      "cale_imagine": "cb35c769a818ffb4d12b74109250d6e6.jpg",
+      "titlu": "Buchet flori albe delicate",
+      "descriere": "Buchet cu gypsophila albă",
+      "timp": "09:00-13:00"
+    },
+    {
+      "cale_imagine": "Dark Teal & Burgundy Bridal Bouquet L Dried Flowers Bouquet L Whimsical Bouquet L Gift for Her - Etsy UK.jpeg",
+      "titlu": "Buchet flori uscate",
+      "descriere": "Buchet rustic cu flori uscate",
+      "timp": "10:00-14:00"
+    },
+    {
+      "cale_imagine": "download.jpeg",
+      "titlu": "Buchet liliac și bujori",
+      "descriere": "Buchet pastelat cu liliac mov",
+      "timp": "11:00-15:00"
+    },
+    {
+      "cale_imagine": "Flower bonquet inspiration.jpeg",
+      "titlu": "Buchet flori de primăvară",
+      "descriere": "Buchet colorat cu flori mixte",
+      "timp": "08:00-14:00"
+    },
+    {
+      "cale_imagine": "rsz_1aaa4bbb7f7ebd6ae67b7b828a824fc34.jpg",
+      "titlu": "Buchet trandafiri clasici",
+      "descriere": "Buchet elegant cu trandafiri",
+      "timp": "09:00-12:00"
+    },
+    {
+      "cale_imagine": "rsz_503508d9e7ee54ae3f21525d326778ce.jpg",
+      "titlu": "Buchet asortat pastelat",
+      "descriere": "Buchet cu flori pastel",
+      "timp": "10:00-13:00"
+    },
+    {
+      "cale_imagine": "rsz_db0e3f1a6d0399310e7a8a363d73311e.jpg",
+      "titlu": "Buchet flori galbene",
+      "descriere": "Buchet de crizanteme galbene",
+      "timp": "12:00-16:00"
+    },
+    {
+      "cale_imagine": "snow.jpeg",
+      "titlu": "Aranjament tematic",
+      "descriere": "Buchet tematic cu cranii",
+      "timp": "13:00-17:00"
+    },
+    {
+      "cale_imagine": "daisy.jpeg",
+      "titlu": "Buchet cu margarete și levănțică",
+      "descriere": "Flori de levănțică și margarete galbene",
+      "timp": "09:00-12:00"
+    },
+    {
+      "cale_imagine": "download1.jpeg",
+      "titlu": "Buchet cu flori albastre",
+      "descriere": "Flori albastre învelite în hârtie",
+      "timp": "08:00-11:00"
+    },
+    {
+      "cale_imagine": "Rustic Elegance.jpeg",
+      "titlu": "Buchet rustic cu hortensii albastre",
+      "descriere": "Buchet de nuntă cu hortensii și margarete sălbatice",
+      "timp": "10:00-14:00"
+    }
+  ]
+}

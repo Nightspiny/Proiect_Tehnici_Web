@@ -1,0 +1,29 @@
+body.pagina-despre {
+    background: linear-gradient(to right, #fbf8cc, #fde4cf);
+    font-family: Georgia, serif;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Stil pentru secțiunea de mesaj */
+h1 {
+    color: #884400;
+    text-align: center;
+    margin-top: 1em;
+}
+
+#utilizator-info {
+    margin-top: 2em;
+    background-color: #fff8dc;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+#utilizator-info h3 {
+    color: #5a3000;
+}
+
+#utilizator-info p {
+    color: #333;
+}

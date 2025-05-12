@@ -1,0 +1,299 @@
+/* Setări globale */
+body {
+    background: linear-gradient(to right, #CDD685, #FBEC88), url('/resurse/imagini/fundal.jpg');
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Stiluri pentru titluri */
+h2 {
+    font-size: 1.6rem;
+    color: #333; /* Culoare mai închisă pentru a fi mai vizibil */
+}
+
+h3 {
+    font-size: 1.3rem;
+    color: #555; /* O nuanță de gri pentru titlurile secundare */
+}
+
+/* Definirea unei variabile CSS pentru culoarea gradientului */
+:root {
+    --c1: rgba(0, 128, 255, 0.3); /* culoare centrală a petei */
+}
+
+/* Grid layout pentru pagină */
+#grid-pagina {
+    display: grid;
+    grid-template-areas: "welcome  welcome  welcome"
+                         "promotii promotii anunturi" 
+                         "fig1     produse  produse"
+                         "fig2     produse  produse"
+                         "fig3     produse  produse"
+                         "orar     orar     orar"
+                         "index-intrebari index-intrebari index-intrebari";
+    grid-gap: 15px;
+}
+
+#grid-pagina > * {
+    outline: 1px solid navy;
+    padding: 7px;
+}
+
+#grid-pagina > figure {
+    margin: 0;
+}
+
+#grid-pagina img {
+    width: 100%;
+    max-width: 300px;
+}
+
+/* Meniu, header și butonul scroll-to-top */
+header {
+    background-color: #ffe195;
+    color: white;
+    padding: 10px;
+}
+
+header nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    color: #ff6600;
+}
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.diamond {
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    position: relative;
+    transform: rotate(45deg);
+    border: 2px solid #f56416;
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 30px solid #e28413;
+    position: absolute;
+    rotate: -45deg;
+    top: 7px;
+    left: 7px;
+}
+
+.scroll-to-top:hover .triangle {
+    border-bottom-color: #e28513df;
+}
+
+/* Stiluri pentru iframe */
+.container-iframe {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-color: #FBEC88;
+}
+
+.container-iframe > iframe {
+    width: 100%;
+}
+
+.taburi-iframe {
+    position: relative;
+    max-width: 560px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.video-target {
+    display: none;
+}
+
+.video-target:target {
+    display: block;
+}
+
+/* Stiluri pentru butoanele de video */
+.video-button {
+    padding: 10px;
+    background-color: #f0ca6a;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    border: 2px solid #fff;
+    border-radius: 5px 5px 0 0;
+    transition: background-color 0.3s;
+}
+
+.video-button:hover {
+    background-color: #cf9963;
+}
+
+/* Galerie de imagini */
+.galerie {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+}
+
+.imagine img {
+    width: 100%;
+    height: auto;
+}
+
+.imagine h3 {
+    font-size: 1.2em;
+    margin: 0.5em 0;
+}
+
+.imagine p {
+    font-size: 0.9em;
+    color: #555;
+}
+
+main {
+    padding-left: var(--spatiere-pagina);
+    padding-right: var(--spatiere-pagina);
+}
+
+/* Stiluri pentru linkuri */
+a:visited {
+    color: var(--culoare-vizitat); /* exemplu: purple */
+}
+
+a[href^="http"]::before {
+    content: "↗";
+    font-size: 1.5em;
+    margin-right: 0.25em;
+}
+
+a[href^="http"]:hover::before {
+    color: #ff6600;
+}
+
+a:hover {
+    position: relative;
+    z-index: 0;
+    transition: all 0.4s ease;
+}
+
+a:hover::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    background: radial-gradient(circle, var(--c1) 0%, var(--c1) 40%, transparent 80%, transparent 100%);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 0;
+    transition: background-size 0.4s ease;
+    z-index: -1;
+}
+
+a:hover::after {
+    width: 100%;
+    height: 100%;
+    background-size: 100% 100%;
+}
+
+a:active {
+    outline: 2px solid var(--c1);
+    border-radius: 4px;
+}
+
+/* Responsivitate */
+@media screen and (max-width: 768px) {
+    table {
+        width: 100%;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width:1200px) {
+    html {
+        font-size: 14px;
+    }
+
+    body {
+        --spatiere-pagina: 50px;
+    }
+
+    #grid-pagina {
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: "welcome  welcome"
+                             "promotii promotii"
+                             "anunturi anunturi"
+                             "fig1     produse"
+                             "fig2     produse"
+                             "fig3     produse"
+                             "orar     orar"
+                             "index-intrebari index-intrebari";
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #grid-pagina {
+        display: block;
+    }
+
+    html {
+        font-size: 10px;
+    }
+
+    body {
+        --spatiere-pagina: 20px;
+    }
+}
+
+section {
+    outline: 2px solid green;
+    padding: 10px;
+}
+
+h2 {
+    color: rgb(147, 4, 4);
+    font-style: italic;
+}
+
+p {
+    margin-left: 30px;
+    color: rgb(4, 4, 111);
+}
+
+body {
+    font-family: serif;
+}

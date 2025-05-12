@@ -1,0 +1,53 @@
+body.pagina-galerie {
+    background-color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Galeria propriu-zisă */
+.galerie {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 coloane pe desktop */
+    gap: 2em;
+    margin-top: 2em;
+}
+
+/* Responsive pentru ecran mediu (două coloane) */
+@media screen and (max-width: 1000px) {
+    .galerie {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Responsive pentru ecran mic (o singură coloană) */
+@media screen and (max-width: 600px) {
+    .galerie {
+        grid-template-columns: 1fr;
+    }
+}
+
+.imagine {
+    background-color: #fafafa;
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: center;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.imagine:hover {
+    transform: scale(1.05);
+}
+
+.imagine img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.imagine figcaption {
+    margin-top: 10px;
+    font-size: 1em;
+    color: #555;
+}

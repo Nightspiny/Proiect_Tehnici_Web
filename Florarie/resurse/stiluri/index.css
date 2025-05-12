@@ -1,0 +1,46 @@
+body.pagina-index {
+    background: linear-gradient(to right, #CDD685, #FBEC88), url('/resurse/imagini/fundal.jpg');
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Layout specific homepage */
+#welcome, #promotii, #anunturi, #fig1, #fig2, #fig3, #orar, #index-intrebari {
+    padding: 1em;
+    margin-bottom: 1em;
+}
+
+/* Stil general pentru secțiuni */
+main > section {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+/* Stil pentru titluri */
+h2 {
+    color: rgb(147, 4, 4);
+    font-style: italic;
+}
+
+/* Stil pentru paragrafe */
+p {
+    color: rgb(4, 4, 111);
+    margin-left: 20px;
+}
+
+/* Stil pentru iframe-uri */
+.container-iframe {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.video-button {
+    background-color: #f0ca6a;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px;
+}

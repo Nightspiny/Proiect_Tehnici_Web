@@ -1,0 +1,33 @@
+{
+    "cale_baza": "/resurse/imagini/erori/",
+    "eroare_default": {
+      "titlu": "Eroare",
+      "text": "A apărut o eroare neașteptată.",
+      "imagine": "default.png"
+    },
+    "info_erori": 
+  [
+  {
+    "identificator": 404,
+    "status": false,
+    "titlu": "404 - Pagina nu există",
+    "text": "Pagina pe care o cauți nu se găsește.",
+    "imagine": "404.jpg"
+  },
+  {
+    "identificator": 403,
+    "status": false,
+    "titlu": "403 - Acces interzis",
+    "text": "Nu ai drepturi pentru această resursă.",
+    "imagine": "403.jpg"
+  },
+  {
+    "identificator": 500,
+    "status": false,
+    "titlu": "500 - Eroare internă",
+    "text": "A apărut o problemă internă pe server.",
+    "imagine": "500.jpg"
+  }
+  ]
+}
+  

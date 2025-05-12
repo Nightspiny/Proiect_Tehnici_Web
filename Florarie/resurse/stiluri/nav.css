@@ -1,0 +1,448 @@
+#hamburger{
+    display: none;
+}
+
+#ch-menu{
+    display: none;
+}
+
+nav{
+    background-color: #F0CA6A;
+    --inaltime-meniu:35px;
+    --latime-buton:120px;
+    height:var(--inaltime-meniu);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 5px;
+    position: relative;
+    padding: 0 20px;
+}
+
+ul.meniu{
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    gap: 5px;
+    justify-content: space-around;
+}
+
+ul.meniu li:hover {
+    background-color: #f7d98e;
+}
+
+ul.meniu li div.imag-icon{
+    display: none;
+}
+
+ul.meniu ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #f7d47d;
+    border-radius: 0 0 10px 10px;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    z-index: 9999;
+    width: 100%; 
+    display: none;
+}
+
+ul.meniu ul li {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+ul.meniu ul li a {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+    background-color: #f7d47d;
+    transition: background-color 0.3s ease;
+}
+
+ul.meniu ul li a:hover {
+    background-color: #e3bb5c;
+    color: white;
+}
+
+ul.meniu li:hover > ul {
+    display: block;
+}
+
+ul.meniu li {
+    background-color: #F0CA6A;
+    border: none;
+    border-radius: 5px;
+    height: var(--inaltime-meniu);
+    width: var(--latime-buton);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    position: relative;
+    white-space: nowrap;
+    transition: background-color 0.3s ease;
+    list-style-type: none;
+}
+
+ul.meniu li a {
+    color: black;
+    text-decoration: none;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+ul.meniu li > * {
+    pointer-events: auto;
+}
+
+ul.meniu li a, ul.meniu li div {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    line-height: var(--inaltime-meniu);
+    font-size: 14px;
+    position: relative;
+    z-index: 1;
+}
+
+ul.meniu li:hover a, ul.meniu li:hover div {
+    color: black;
+
+}
+
+ul.meniu li ul li a:hover {
+    background-color: #cf9963;
+    color: white;
+}
+
+ul.meniu li ul li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: var(--inaltime-meniu); /* asigură înălțimea consistentă */
+    box-sizing: border-box;
+    text-align: center;
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+    background-color: #f7d47d;
+    transition: background-color 0.3s ease;
+}
+
+ul.meniu a, ul.meniu div{
+    /*color: black;*/
+    text-decoration: none;
+    transition: all 1s linear;
+    display: block;
+    height: 100%;
+    cursor: pointer;
+}
+
+ul.meniu li::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -100%;
+    width: 300%;
+    height: 100%;
+    transition: left 0.5s ease;
+    z-index: 0;
+}
+
+ul.meniu li:hover::before {
+    left: 0;
+}
+
+ul.meniu li.buton-acasa::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, #cf9963, #f7d47d);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+ul.meniu li.buton-acasa:hover::after {
+    transform: scaleX(1);
+}
+
+ul.meniu li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #F0CA6A;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    border-radius: 0 0 5px 5px;
+    z-index: 999;
+    min-width: 150px;
+    min-width: var(--latime-buton);
+    width: var(--latime-buton);
+}
+
+@media screen and (max-width: 768px) {
+    /* ICONIȚA HAMBURGER CU 3 BARE */
+    #hamburger {
+        display: flex !important;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 40px;
+        height: 30px;
+        position: absolute;
+        top: 20px;
+        left: 10px;
+        z-index: 1000;
+        cursor: pointer;
+    }
+
+    #hamburger .bar {
+        width: 100%;
+        height: 5px;
+        background-color: black;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+    }
+
+    /* ANIMAȚIE LA CHECK */
+    #ch-menu:checked + #hamburger .bar {
+        animation: animateBar 0.6s ease forwards;
+    }
+
+    #ch-menu:checked + #hamburger .bar:nth-child(2) {
+        animation-delay: 0.1s;
+    }
+
+    #ch-menu:checked + #hamburger .bar:nth-child(3) {
+        animation-delay: 0.2s;
+    }
+
+    @keyframes animateBar {
+        0% {
+            background-color: black;
+            transform: scaleX(1);
+            opacity: 1;
+        }
+        50% {
+            background-color: red;
+            transform: scaleX(1.2) rotate(5deg);
+            opacity: 0.7;
+        }
+        100% {
+            background-color: blue;
+            transform: scaleX(1.5) rotate(-5deg);
+            opacity: 0.4;
+        }
+    }
+
+    /* MENIU MOBILE */
+    nav {
+        padding-top: 50px;
+    }
+
+    ul.meniu {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        background-color: #F0CA6A;
+        width: 100%;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        z-index: 998;
+        padding: 20px 0;
+        max-height: 80vh;
+        overflow-y: auto;
+    }
+
+    #ch-menu:checked ~ ul.meniu {
+        display: flex;
+    }
+
+    ul.meniu li {
+        width: 100%;
+        max-width: 300px;
+        text-align: center;
+        font-size: 18px;
+        padding: 10px;
+        margin: 8px 0;
+    }
+
+    ul.meniu li ul {
+        position: relative;
+        opacity: 0;
+        transform: rotateX(-90deg);
+        transform-origin: top;
+        transition: transform 0.5s ease, opacity 0.5s ease;
+    }
+
+    ul.meniu li.open ul {
+        display: block;
+        opacity: 1;
+        transform: rotateX(0deg);
+    }
+
+    ul.meniu li:hover a, ul.meniu li:hover div {
+        color: black;
+    }
+
+    ul.meniu li ul li a:hover {
+        background-color: #cf9963;
+        color: white;
+    }
+
+    ul.meniu li:first-child a {
+        font-size: 0;
+        position: relative;
+    }
+
+    ul.meniu li:first-child a::before {
+        content: "\f015";
+        font-family: "Font Awesome 6 Free";
+        font-weight: 900;
+        font-size: 18px;
+        display: inline-block;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    ul.meniu li {
+        font-size: 14px;
+        height: 25px;
+    }
+}
+
+/*ecran mediu*/
+@media screen and (max-width: 1000px) {
+    nav {
+        font-size: 12px;
+    }
+    ul.meniu li:first-child a::before {
+        content: "\f015"; /* Unicode FontAwesome pentru "home" */
+        font-family: "Font Awesome 6 Free";
+        font-weight: 900;
+        display: inline-block;
+        margin-right: 5px;
+    }
+
+    ul.meniu li:first-child a {
+        font-size: 0;
+    }
+
+    ul.meniu li:first-child a::before {
+        font-size: 16px;
+    }
+}
+
+@media print {
+    /*Banner afișat în josul primei pagini */
+    footer::after {
+      content: "Acesta este un proiect școlar!";
+      display: block;
+      text-align: center;
+      width: 70%;
+      margin: 0 auto;
+      border: 4px inset black;
+      padding: 10px;
+      page-break-after: avoid;
+    }
+  
+    /*Ascundem imagini, clipuri video, iframe-uri etc. */
+    img,
+    video,
+    iframe,
+    picture,
+    object,
+    embed,
+    figcaption {
+      display: none !important;
+    }
+  
+    /*Gridul paginii să fie block */
+    #grid-pagina {
+      display: block !important;
+    }
+  
+    /*Linkurile apar ca text normal */
+    a {
+      color: black !important;
+      text-decoration: none !important;
+    }
+  
+    /*Heading de nivel 1 centrat + meniu simplificat */
+    h1 {
+      text-align: center;
+      page-break-after: avoid;
+    }
+  
+    nav {
+      page-break-after: always;
+    }
+  
+    nav ul {
+      list-style-type: disc;
+      padding-left: 40px;
+      text-align: left;
+    }
+
+    nav ul li {
+        display: list-item;
+        margin-bottom: 5px;
+    }
+  
+    nav ul ul {
+      display: none; /* Subopțiunile nu se afișează */
+    }
+  
+    /*Watermark pe fiecare pagină */
+    body::after {
+        content: "Brabete Elena-Bianca";
+        position: fixed;
+        bottom: 2.8cm;
+        right: 1cm;
+        width: 3.5cm;
+        height: 1cm;
+        border: 3px solid black;
+        border-radius: 10px;
+        text-align: center;
+        font-weight: bold;
+        opacity: 0.4;
+        font-size: 11px;
+        padding-top: 2px;
+        background-color: white;
+      }
+
+    /*Margini pentru pagini tipărite */
+    @page :left {
+      margin-left: 3cm;
+      margin-right: 1cm;
+    }
+  
+    @page :right {
+      margin-right: 3cm;
+      margin-left: 1cm;
+    }
+  }
