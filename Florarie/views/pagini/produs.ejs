@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ro">
+<%- include('../fragmente/head', { titlu: produs.titlu, pagina_css: pagina_css }) %>
+<body>
+<%- include('../fragmente/header') %>
+
+<main class="pagina-produs">
+    <h2><%= produs.titlu %></h2>
+    <img src="<%= cale_galerie + produs.cale_imagine %>" alt="<%= produs.titlu %>" style="max-width:400px;">
+
+    <p><strong>Descriere:</strong> <%= produs.descriere %></p>
+    <p><strong>Interval disponibil:</strong> <%= produs.timp %></p>
+
+    <% if (produs.flori && produs.flori.length > 0) { %>
+        <p><strong>Flori:</strong> <%= produs.flori.join(', ') %></p>
+    <% } %>
+    <% if (produs.sarbatori && produs.sarbatori.length > 0) { %>
+        <p><strong>Sărbători:</strong> <%= produs.sarbatori.join(', ') %></p>
+    <% } %>
+    <% if (produs.aranjamente && produs.aranjamente.length > 0) { %>
+        <p><strong>Aranjamente:</strong> <%= produs.aranjamente.join(', ') %></p>
+    <% } %>
+</main>
+
+<%- include('../fragmente/footer') %>
+</body>
+</html>

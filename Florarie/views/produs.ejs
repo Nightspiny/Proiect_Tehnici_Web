@@ -1,0 +1,24 @@
+<%- include("../fragmente/head") %>
+<%- include("fragmente/header") %>
+
+<div class="produs">
+  <h1><%= produs.titlu %></h1>
+
+  <% if (produs.cale_imagine) { %>
+    <img src="/resurse/imagini/galerie/<%= produs.cale_imagine %>" alt="<%= produs.titlu %>">
+  <% } %>
+
+  <p><%= produs.descriere %></p>
+  <p><strong>Preț:</strong> <%= produs.pret.toFixed(2) %> lei</p>
+  <p><strong>Stoc:</strong> <%= produs.stoc %></p>
+  <p><strong>Disponibil între:</strong> <%= produs.timp_disponibil %></p>
+  <p><strong>Categorie:</strong> <%= produs.categorie %></p>
+
+  <p><strong>Flori:</strong> <%= produs.flori.length > 0 ? produs.flori.join(", ") : "—" %></p>
+  <p><strong>Sărbători:</strong> <%= produs.sarbatori.length > 0 ? produs.sarbatori.join(", ") : "—" %></p>
+  <p><strong>Aranjamente:</strong> <%= produs.aranjamente.length > 0 ? produs.aranjamente.join(", ") : "—" %></p>
+
+  <<p><a class="back-link" href="/produse">← Înapoi la produse</a></p>
+</div>
+
+<%- include("fragmente/footer") %>

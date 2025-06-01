@@ -1,23 +1,14 @@
 <!DOCTYPE html>
 <html lang="ro">
-<%- include('../fragmente/head', { titlu: 'Galerie', pagina_css: 'galerie' }) %>
-<body class="pagina-galerie">
-<%- include('../fragmente/header') %>
+  <%- include("../fragmente/head", { titlu: titlu, pagina_css: 'despre' }) %>
+  <body>
+    <%- include("../fragmente/header") %>
 
-<main>
-    <h2>Galeria noastră</h2>
-    <div class="galerie">
-        <% imagini.forEach(imagine => { %>
-            <div class="imagine">
-                <img src="<%= cale_galerie + imagine.cale_imagine %>" alt="<%= imagine.titlu %>">
-                <h3><%= imagine.titlu %></h3>
-                <p><%= imagine.descriere %></p>
-                <p><%= imagine.timp %></p>
-            </div>
-        <% }) %>
-    </div>
-</main>
+        <main>
+      <h1><%= titlu %></h1>
+      <p><%= mesaj %></p>
+    </main>
 
-<%- include('../fragmente/footer') %>
-</body>
+        <%- include('../fragmente/footer') %>
+    </body>
 </html>

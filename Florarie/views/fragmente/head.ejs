@@ -17,13 +17,15 @@
     <link rel="stylesheet" href="resurse/stiluri/nav1000.css" type="text/css" media="screen and (max-width:1000px)" />
     <link rel="stylesheet" href="resurse/stiluri/nav700.css" type="text/css" media="screen and (max-width:700px)" />
 
-    <% if (pagina_css) { %>
-    <link rel="stylesheet" href="/resurse/stiluri/<%= pagina_css %>.css" type="text/css" />
-    <% } %>
+    <% if (typeof pagina_css !== 'undefined') { %>
+  <link rel="stylesheet" href="/resurse/stiluri/<%= pagina_css %>.css">
+<% } %>
+
+
+    <link rel="stylesheet" href="/resurse/css/custom.css" type="text/css" />
 
     <!-- FontAwesome pentru iconițe -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
-
 
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="resurse/imagini/apple-touch-icon.png">

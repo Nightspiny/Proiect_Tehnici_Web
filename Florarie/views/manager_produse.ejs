@@ -1,0 +1,83 @@
+<script>
+  const produse = [
+    {
+      id: 1,
+      nume: "Buchet trandafiri roșii",
+      descriere: "Buchet elegant cu trandafiri și verdeață decorativă",
+      imagine: "trandafiri-rosii.jpg",
+      categorie: "flori",
+      subcategorie: "trandafiri",
+      ocazie: "nunta",
+      pret: 150.0,
+      nrFlori: 12,
+      dataDisponibilitate: "2024-06-01",
+      culori: ["roșu", "verde"],
+      livrareRapida: true
+    },
+    {
+      id: 2,
+      nume: "Aranjament Crăciun",
+      descriere: "Decor festiv cu lumânări și conuri",
+      imagine: "aranjament-craciun.jpg",
+      categorie: "sarbatori",
+      subcategorie: "craciun",
+      ocazie: "craciun",
+      pret: 89.99,
+      nrFlori: 1,
+      dataDisponibilitate: "2024-12-10",
+      culori: ["roșu", "auriu"],
+      livrareRapida: false
+    }
+  ];
+
+  function afiseazaProduse(lista) {
+    const container = document.getElementById("tabel-produse");
+    container.innerHTML = "";
+    if (lista.length === 0) {
+      container.innerHTML = '<tr><td colspan="8" class="text-center">Nu există produse.</td></tr>';
+      return;
+    }
+    for (const p of lista) {
+      const tr = document.createElement("tr");
+      tr.innerHTML = `
+        <td>${p.nume}</td>
+        <td>${p.categorie}</td>
+        <td>${p.subcategorie}</td>
+        <td>${p.ocazie}</td>
+        <td>${p.pret.toFixed(2)} RON</td>
+        <td>${p.dataDisponibilitate}</td>
+        <td>${p.nrFlori}</td>
+        <td><button onclick="stergeProdus(${p.id})">🗑️</button></td>
+      `;
+      container.appendChild(tr);
+    }
+  }
+
+  function stergeProdus(id) {
+    const index = produse.findIndex(p => p.id === id);
+    if (index !== -1) {
+      produse.splice(index, 1);
+      afiseazaProduse(produse);
+    }
+  }
+
+  window.onload = () => afiseazaProduse(produse);
+</script>
+
+<table border="1" style="width:100%; border-collapse:collapse; margin-top:2em">
+  <thead>
+    <tr>
+      <th>Nume</th>
+      <th>Categorie</th>
+      <th>Subcategorie</th>
+      <th>Ocazie</th>
+      <th>Preț</th>
+      <th>Disponibilitate</th>
+      <th>Nr. flori</th>
+      <th>Acțiuni</th>
+    </tr>
+  </thead>
+  <tbody id="tabel-produse">
+    <!-- Populat din JS -->
+  </tbody>
+</table>

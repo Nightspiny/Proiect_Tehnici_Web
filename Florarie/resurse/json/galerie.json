@@ -1,0 +1,273 @@
+{
+  "cale_galerie": "/resurse/imagini/galerie/",
+  "imagini": [
+    {
+      "cale_imagine": "download (7).jpeg",
+      "titlu": "Buchet Halloween White Skull",
+      "descriere": "Trandafiri albi cu față de dovleac scary",
+      "timp": "09:00-13:00",
+      "flori": [
+        "trandafiri"
+      ],
+      "sarbatori": [
+        "halloween"
+      ],
+      "aranjamente": []
+    },
+    {
+      "cale_imagine": "Jack skellington bouquet.jpeg",
+      "titlu": "Buchet Jack Skellington",
+      "descriere": "Buchet de Halloween cu păpușă Jack și păianjeni",
+      "timp": "10:00-14:00",
+      "flori": [
+        "trandafiri"
+      ],
+      "sarbatori": [
+        "halloween"
+      ],
+      "aranjamente": []
+    },
+    {
+      "cale_imagine": "download (6).jpeg",
+      "titlu": "Buchet portocaliu Halloween",
+      "descriere": "Crizanteme cu fețe de dovleac pe fundal negru și portocaliu",
+      "timp": "08:00-12:00",
+      "flori": [
+        "crizanteme"
+      ],
+      "sarbatori": [
+        "halloween"
+      ],
+      "aranjamente": []
+    },
+    {
+      "cale_imagine": "Send Birthday Flowers to India Online - Indiagift.jpeg",
+      "titlu": "Buchet zi de naștere colorat",
+      "descriere": "Buchet pastelat cu balon Happy Birthday",
+      "timp": "11:00-16:00",
+      "flori": [
+        "trandafiri",
+        "garoafe"
+      ],
+      "sarbatori": [],
+      "aranjamente": [
+        "zi de naștere"
+      ]
+    },
+    {
+      "cale_imagine": "inima.jpeg",
+      "titlu": "Buchet romantic cu trandafiri roz",
+      "descriere": "Trandafiri roz și roșii cu fundă elegantă",
+      "timp": "09:00-15:00",
+      "flori": [
+        "trandafiri"
+      ],
+      "sarbatori": [],
+      "aranjamente": [
+        "nunta",
+        "zi de naștere"
+      ]
+    },
+    {
+      "cale_imagine": "Romantic anniversary bouquet.jpeg",
+      "titlu": "Buchet romantic cu poze",
+      "descriere": "Buchet cu gypsophila albă și trandafiri, decorat cu poze",
+      "timp": "10:00-14:00",
+      "flori": [
+        "trandafiri",
+        "gypsophila"
+      ],
+      "sarbatori": [],
+      "aranjamente": [
+        "nunta",
+        "custom"
+      ]
+    },
+    {
+      "cale_imagine": "Lemon sorbet - Premium (adding more blooms for lavish look).jpeg",
+      "titlu": "Buchet galben lemon sorbet",
+      "descriere": "Flori galbene și margarete cu aspect proaspăt",
+      "timp": "12:00-17:00",
+      "flori": [
+        "trandafiri",
+        "margarete"
+      ],
+      "sarbatori": [],
+      "aranjamente": []
+    },
+    {
+      "cale_imagine": "Pastel Dreams.jpeg",
+      "titlu": "Aranjament floral pastelat",
+      "descriere": "Flori pastelate într-o vază elegantă",
+      "timp": "09:00-18:00",
+      "flori": [
+        "trandafiri",
+        "margarete",
+        "bujori"
+      ],
+      "sarbatori": [],
+      "aranjamente": []
+    },
+    {
+      "cale_imagine": "Red and Green Wedding Bouquet.jpeg",
+      "titlu": "Buchet Crăciun cu trandafiri roșii",
+      "descriere": "Trandafiri, conifere și gypsophila, perfect pentru Crăciun",
+      "timp": "09:00-13:00",
+      "flori": [
+        "trandafiri",
+        "gypsophila"
+      ],
+      "sarbatori": [
+        "crăciun"
+      ],
+      "aranjamente": [
+        "nunta"
+      ]
+    },
+    {
+      "cale_imagine": "buchet.jpeg",
+      "titlu": "Buchet de iarnă cu bumbac și fructe roșii",
+      "descriere": "Buchet rustic de Crăciun cu bumbac și accente verzi",
+      "timp": "10:00-14:00",
+      "flori": [
+        "bumbac"
+      ],
+      "sarbatori": [
+        "crăciun"
+      ],
+      "aranjamente": []
+    },
+    {
+      "cale_imagine": "download (5).jpeg",
+      "titlu": "Buchet liliac roz în ambalaj roz",
+      "descriere": "Buchet elegant de crini roz",
+      "timp": "08:00-12:00",
+      "flori": [
+        "crini"
+      ],
+      "sarbatori": [],
+      "aranjamente": []
+    },
+    {
+      "cale_imagine": "buchet1.jpeg",
+      "titlu": "Buchet crini roz de lux",
+      "descriere": "Aranjament romantic cu crini roz intens",
+      "timp": "09:00-15:00",
+      "flori": [
+        "crini"
+      ],
+      "sarbatori": [],
+      "aranjamente": [
+        "nunta"
+      ]
+    },
+    {
+      "cale_imagine": "White Lilies Bouquet.jpeg",
+      "titlu": "Buchet crini albi",
+      "descriere": "Crini albi și gypsophila, ideal pentru ocazii elegante",
+      "timp": "11:00-16:00",
+      "flori": [
+        "crini",
+        "gypsophila"
+      ],
+      "sarbatori": [],
+      "aranjamente": []
+    },
+    {
+      "cale_imagine": "download (4).jpeg",
+      "titlu": "Buchet cu floarea-soarelui și margarete",
+      "descriere": "Buchet de vară colorat și proaspăt",
+      "timp": "09:00-17:00",
+      "flori": [
+        "floarea-soarelui",
+        "margarete"
+      ],
+      "sarbatori": [],
+      "aranjamente": []
+    },
+    {
+      "cale_imagine": "download (3).jpeg",
+      "titlu": "Buchet cu floarea-soarelui",
+      "descriere": "Buchet generos cu floarea-soarelui, ideal pentru vară",
+      "timp": "08:00-13:00",
+      "flori": [
+        "floarea-soarelui"
+      ],
+      "sarbatori": [],
+      "aranjamente": []
+    },
+    {
+      "cale_imagine": "woodys sunflower bouquet.jpeg",
+      "titlu": "Buchet rustic cu floarea-soarelui",
+      "descriere": "Compoziție cu floarea-soarelui și frunze decorative",
+      "timp": "10:00-14:00",
+      "flori": [
+        "floarea-soarelui"
+      ],
+      "sarbatori": [],
+      "aranjamente": []
+    },
+    {
+      "cale_imagine": "#flowers #aesthetic #pink #photography #profile #icon #fyp #foryoupage #homepage #tulips #prettyinpink #pink #foryou.jpeg",
+      "titlu": "Buchet cu lalele roz pastel",
+      "descriere": "Buchet minimalist cu lalele roz deschis",
+      "timp": "12:00-17:00",
+      "flori": [
+        "lalele"
+      ],
+      "sarbatori": [],
+      "aranjamente": []
+    },
+    {
+      "cale_imagine": "download (2).jpeg",
+      "titlu": "Buchet cu lalele portocalii",
+      "descriere": "Buchet proaspăt de lalele portocalii, cu fundă elegantă",
+      "timp": "09:00-18:00",
+      "flori": [
+        "lalele"
+      ],
+      "sarbatori": [],
+      "aranjamente": []
+    },
+    {
+      "cale_imagine": "download (1).jpeg",
+      "titlu": "Buchet cu lalele albe și margarete",
+      "descriere": "Buchet proaspăt cu lalele, margarete și flori albastre",
+      "timp": "08:00-13:00",
+      "flori": [
+        "lalele",
+        "margarete"
+      ],
+      "sarbatori": [],
+      "aranjamente": []
+    },
+    {
+      "cale_imagine": "Roses.jpeg",
+      "titlu": "Buchet trandafiri roșii și albi",
+      "descriere": "Buchet clasic de trandafiri cu gypsophila",
+      "timp": "10:00-15:00",
+      "flori": [
+        "trandafiri",
+        "gypsophila"
+      ],
+      "sarbatori": [],
+      "aranjamente": [
+        "nunta"
+      ]
+    },
+    {
+      "cale_imagine": "download.jpeg",
+      "titlu": "Buchet cu trandafiri albi și gypsophila mov",
+      "descriere": "Aranjament floral cu aspect romantic, stil pastel",
+      "timp": "09:00-16:00",
+      "flori": [
+        "trandafiri",
+        "gypsophila"
+      ],
+      "sarbatori": [],
+      "aranjamente": [
+        "custom"
+      ]
+    }
+  ]
+}

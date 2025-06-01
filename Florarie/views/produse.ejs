@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <title>Produse Florărie</title>
+<body>
+  <%- include("fragmente/head") %>
+  <%- include("fragmente/header") %>
+  <h1>Lista produse</h1>
+
+  <form method="GET" action="/produse" class="filtru-produse">
+  <!-- a. input text pentru căutare după nume -->
+  <label for="cautare">Nume produs:</label>
+  <input type="text" id="cautare" name="cautare" placeholder="Caută produs...">
+
+  <!-- b. input range pentru preț -->
+  <label for="pret">Preț maxim:</label>
+  <input type="range" id="pret" name="pret" min="50" max="500" value="500" 
+         oninput="document.getElementById('pret_val').innerText=this.value">
+  <span id="pret_val">500</span> lei
+
+  <!-- d. radio pentru categorii -->
+  <fieldset>
+    <div class="btn-group" role="group" aria-label="Categorie">
+  <input type="radio" class="btn-check" name="categorie" id="cat-toate" value="toate" autocomplete="off" checked>
+  <label class="btn btn-outline-primary" for="cat-toate">Oricare</label>
+
+  <input type="radio" class="btn-check" name="categorie" id="cat-cutie" value="cutie" autocomplete="off">
+  <label class="btn btn-outline-primary" for="cat-cutie">Cutie</label>
+
+  <input type="radio" class="btn-check" name="categorie" id="cat-buchet" value="buchet" autocomplete="off">
+  <label class="btn btn-outline-primary" for="cat-buchet">Buchet</label>
+</div>
+
+  </fieldset>
+
+  <!-- e. checkbox pentru flori -->
+  <fieldset>
+    <legend>Flori:</legend>
+    <label><input type="checkbox" name="flori" value="trandafiri"> Trandafiri</label>
+    <label><input type="checkbox" name="flori" value="lalele"> Lalele</label>
+    <label><input type="checkbox" name="flori" value="crini"> Crini</label>
+  </fieldset>
+
+  <!-- g. select simplu pentru disponibilitate -->
+  <label for="disponibilitate">Disponibilitate:</label>
+  <select name="disponibilitate" id="disponibilitate">
+    <option value="">Oricare</option>
+    <option value="dimineata">Dimineața</option>
+    <option value="dupa_amiaza">După-amiază</option>
+  </select>
+
+  <!-- h. select multiplu pentru sărbători -->
+  <label for="sarbatori">Sărbători:</label>
+  <select id="sarbatori" name="sarbatori" multiple>
+    <option value="8 martie">8 Martie</option>
+    <option value="craciun">Crăciun</option>
+    <option value="halloween">Halloween</option>
+  </select>
+
+  <div class="actiuni-filtrare">
+  <button type="submit" name="action" value="filtrare" class="btn btn-primary">
+  <i class="bi bi-funnel-fill"></i> Filtrează
+</button>
+
+<button type="submit" name="action" value="sortare_cresc" class="btn btn-outline-secondary">
+  <i class="bi bi-sort-up"></i> ↑
+</button>
+
+<button type="submit" name="action" value="sortare_desc" class="btn btn-outline-secondary">
+  <i class="bi bi-sort-down"></i> ↓
+</button>
+
+<button type="button" id="btn-resetare" class="btn btn-outline-danger">
+  <i class="bi bi-arrow-counterclockwise"></i> Resetează
+</button>
+
+</div>
+
+<!-- div pentru afisare rezultat calcul -->
+<div id="rezultat-calcul" style="position: fixed; bottom: 20px; right: 20px; background: #fff5b8; padding: 1rem; border: 2px solid #ccc; display: none;">
+  <span id="calcul-valoare"></span>
+</div>
+</form>
+
+<script>
+  document.getElementById("btn-calcul").addEventListener("click", () => {
+    const preturi = [...document.querySelectorAll(".produs .pret")]
+                    .map(e => parseFloat(e.innerText.replace(/[^\d.]/g, "")))
+                    .filter(n => !isNaN(n));
+
+    if (preturi.length > 0) {
+      const suma = preturi.reduce((a, b) => a + b, 0);
+      document.getElementById("calcul-valoare").innerText = `Suma prețurilor: ${suma} lei`;
+      const div = document.getElementById("rezultat-calcul");
+      div.style.display = "block";
+
+      setTimeout(() => div.style.display = "none", 2000);
+    }
+  });
+
+  document.getElementById("btn-resetare").addEventListener("click", () => {
+    if (confirm("Sigur vrei să resetezi toate filtrele?")) {
+      window.location.href = "/produse";
+    }
+  });
+</script>
+
+  <% if (produse.length === 0) { %>
+    <p><em>Nu există produse disponibile.</em></p>
+  <% } else { %>
+    <% produse.forEach(p => { %>
+      <div class="produs">
+        <h2><%= p.titlu %></h2>
+        <% if (p.cale_imagine) { %>
+          <img src="/resurse/imagini/galerie/<%= p.cale_imagine %>" alt="<%= p.titlu %>">
+        <% } %>
+        <p><%= p.descriere %></p>
+        <p class="pret"><strong>Preț:</strong> <%= p.pret.toFixed(2) %> lei</p>
+        <p><strong>Stoc:</strong> <%= p.stoc %></p>
+        <p><strong>Categorie:</strong> <%= p.categorie %></p>
+        <p><strong>Disponibil între:</strong> <%= p.timp_disponibil %></p>
+        <p><strong>Flori:</strong> <%= p.flori.length > 0 ? p.flori.join(", ") : "—" %></p>
+        <p><strong>Sărbători:</strong> <%= p.sarbatori.length > 0 ? p.sarbatori.join(", ") : "—" %></p>
+        <p><strong>Aranjamente:</strong> <%= p.aranjamente.length > 0 ? p.aranjamente.join(", ") : "—" %></p>
+        <p><a href="/produs/<%= p.id %>">Vezi detalii</a></p>
+      </div>
+    <% }) %>
+  <% } %>
+  <%- include("fragmente/footer") %>
+</body>
+</html>

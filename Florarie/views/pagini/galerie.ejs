@@ -9,6 +9,11 @@
     <main>
         <h2>Galeria noastră</h2>
 
+        <!-- Imaginea cu efectul duotone separat -->
+        <div class="imagine-duotone">
+            <img src="/resurse/imagini/poza_duotone.jpeg" alt="Imagine cu efect duotone">
+        </div>
+
        <div class="galerie">
         <% let litere = "abcdefghijklmnopqrstuvwxyz"; %>
         <% for (let i = 0; i < 12; i++) { %>
@@ -18,11 +23,14 @@
                 </figure>
             <% } else if (i < imagini.length) { %> <!-- Dacă există imagine -->
                 <figure class="imagine">
-                    <picture>
-                        <img src="<%= cale_galerie + imagini[i].cale_imagine %>" 
-                            alt="<%= imagini[i].titlu %>" 
-                            title="<%= imagini[i].descriere || imagini[i].titlu %>">
-                    </picture>
+                    <a href="/produs/<%= i %>">
+                        <picture>
+                            <img src="<%= cale_galerie + imagini[i].cale_imagine %>" 
+                                alt="<%= imagini[i].titlu %>" 
+                                title="<%= imagini[i].descriere || imagini[i].titlu %>">
+                        </picture>
+                    </a>
+
                     <figcaption><%= litere[i % litere.length] %>. <%= imagini[i].descriere || imagini[i].titlu %></figcaption>
                 </figure>
             <% } else { %> <!-- Dacă nu există imagine (pune căsuțe goale la restul) -->

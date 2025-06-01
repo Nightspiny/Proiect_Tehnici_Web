@@ -27,27 +27,58 @@ body.pagina-galerie {
     }
 }
 
-.imagine {
-    background-color: #fafafa;
-    border: 1px solid #ddd;
-    padding: 15px;
-    text-align: center;
-    border-radius: 8px;
-    transition: transform 0.3s;
+/* Efectul duotone aplicat pe imaginea separată */
+.imagine-duotone {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    max-width: 600px; /* Ajustează dimensiunea maximă a imaginii */
+    overflow: hidden;
 }
 
-.imagine:hover {
-    transform: scale(1.05);
-}
-
-.imagine img {
+.imagine-duotone img {
     width: 100%;
     height: auto;
-    border-radius: 5px;
+    display: block;
+    transition: all 0.3s ease;
+    filter: grayscale(100%) contrast(120%); /* Transformă imaginea în alb-negru */
+    object-fit: cover; /* Asigură-te că imaginea se potrivește corect */
 }
 
-.imagine figcaption {
-    margin-top: 10px;
-    font-size: 1em;
-    color: #555;
+/* Pseudo-elemente pentru a crea efectul duotone */
+.imagine-duotone::before,
+.imagine-duotone::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    transition: all 0.5s ease;
 }
+
+/* Culoarea 1 și Culoarea 2 pentru ::before */
+.imagine-duotone::before {
+    background: linear-gradient(45deg, rgba(255, 0, 0, 0.5), rgba(0, 255, 255, 0.5)); /* Culoare 1 și Culoare 2 */
+}
+
+/* Culoarea 3 și Culoarea 4 pentru ::after */
+.imagine-duotone::after {
+    background: linear-gradient(45deg, rgba(0, 255, 0, 0.5), rgba(255, 0, 255, 0.5)); /* Culoare 3 și Culoare 4 */
+}
+
+/* Schimbarea culorilor la hover */
+.imagine-duotone:hover::before {
+    background: linear-gradient(45deg, rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5)); /* Culoare 1 și Culoare 2 la hover */
+}
+
+.imagine-duotone:hover::after {
+    background: linear-gradient(45deg, rgba(255, 105, 180, 0.5), rgba(0, 255, 0, 0.5)); /* Culoare 3 și Culoare 4 la hover */
+}
+
+/* Asigură-te că imaginea rămâne sub pseudo-elementele `::before` și `::after` */
+.imagine-duotone img {
+    z-index: 0;
+}
+

@@ -297,3 +297,87 @@ p {
 body {
     font-family: serif;
 }
+
+/* Stilizarea textului */
+h2 {
+    font-size: 50px;
+    font-weight: bold;
+    color: #4a90e2;
+    text-align: center;
+    position: relative;
+    padding: 20px;
+    margin-bottom: 50px; /* Adăugăm puțin spațiu sub text pentru reflexie */
+    z-index: 10;
+}
+
+/* Reflexia efectivă */
+h2::after {
+    content: attr(data-text); /* Folosește textul din atributul data-text */
+    position: absolute;
+    top: 100%;  /* Poziționează reflexia sub text */
+    left: 0;
+    width: 100%;
+    color: #4a90e2;
+    opacity: 0.4;  /* Mărim opacitatea pentru a o face vizibilă */
+    transform: scaleY(-1);  /* Inversare pe verticală */
+    filter: blur(8px);  /* Adăugăm un blur pentru efectul de reflexie */
+    z-index: -1;
+    display: block;
+}
+
+/* Adăugarea unui fundal de tip undă (opțional, pentru un efect mai natural de apă) */
+h2::before {
+    content: '';
+    position: absolute;
+    top: 120%;  /* Distantează unda de text */
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background: repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.2) 0px, rgba(255, 255, 255, 0.2) 10px, transparent 10px, transparent 20px);
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.linie-fullwidth {
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    margin: 40px 0;
+    padding: 0;
+    gap: 0;
+    box-sizing: border-box;
+    position: relative;
+    left: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+}
+
+/* Triunghi stânga */
+.triunghi.stanga {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 24px 0 24px 24px;
+    border-color: transparent transparent transparent #727E6F;
+    flex-shrink: 0;
+    margin-right: -4px; /* Muta triunghiul spre linie */
+}
+
+/* Triunghi dreapta */
+.triunghi.dreapta {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 24px 24px 24px 0;
+    border-color: transparent #727E6F transparent transparent;
+    flex-shrink: 0;
+    margin-left: -4px; /* Muta triunghiul spre linie */
+}
+
+/* Linia subțire între triunghiuri */
+.linie-mijloc {
+    flex-grow: 1;
+    height: 4px;
+    background-color: #727E6F;
+    margin: 0;
+}
